@@ -17,7 +17,9 @@ public class DroolConfig {
 
     private KieFileSystem getKieFileSystem() throws IOException {
         KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-        kieFileSystem.write(ResourceFactory.newClassPathResource("rules/offer.drl"));
+        // kieFileSystem.write(ResourceFactory.newClassPathResource("rules/offer.drl"));
+        // Try to load from decision table
+        kieFileSystem.write(ResourceFactory.newClassPathResource("rules/offer.xls"));
         return kieFileSystem;
 
     }
