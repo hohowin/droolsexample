@@ -45,10 +45,4 @@ public class DroolConfig {
         });
     }
 
-    @Bean
-    public KieSession getKieSession() throws IOException {
-        System.out.println("session created...");
-        return getKieContainer().newKieSession();
-    }
-
 }
